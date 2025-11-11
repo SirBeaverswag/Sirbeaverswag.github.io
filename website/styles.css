@@ -1,0 +1,108 @@
+body {
+  background-color: #1d7874;
+  margin: 50;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+}
+
+h1 {
+  color: #F4C095;
+  font-family: Arial, Helvetica, sans-serif;}
+
+  p {
+  color: #F4C095;
+}
+
+div.container {
+  text-align: left;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+div.bottom {
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 15px;
+}
+
+ul.myUL {
+  display: inline-block;
+  text-align: center;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+ul li a {
+  
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+
+}
+
+h2{
+  text-align: center;
+  color: #F4C095;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table, tr, td{
+  width:10%;
+  border: 2px solid black;
+  text-decoration-line: 15p;
+  text-align:center;
+  
+  th,td {
+    border: 1px solid grey;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: grey;color:white}
+  tr:nth-child(odd){background-color: #05407c;color:white}
+  tr:hover {background-color: #000435}
+  /*resources*/
+}
+
+div.thumbs {
+  border-radius: 8px;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #071E22;
+
+  display: flex;
+  align-items: center;     /* Vertically centers items */
+  justify-content: left; /*Puts the links horizontally left*/
+  flex-wrap: wrap;         /* Helps if the window gets too small */
+}
+ul.navbar li {
+  margin: 14 5px; /* Optional spacing between items */
+  padding: 10px 30px;
+
+}
+
+ul.navbar li img {
+  vertical-align: middle;
+  border-radius: 50%; /* Make image round */
+}
+
+ul.navbar li a {
+  display: inline-block;
+  color: rgb(255, 250, 177);
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+ul.navbar li a:hover {
+  background-color: #0e3941;
+}
