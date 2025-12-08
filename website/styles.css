@@ -1,18 +1,21 @@
 body {
   background-color: #1d7874;
-  margin: 50;
-  padding-top: 50px;
+  margin: 50px;
+  margin-left: 0px;
+  padding-top: 100px;
   padding-right: 30px;
   padding-bottom: 50px;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 h1 {
-  color: #F4C095;
+  color: #160e06;
   font-family: Arial, Helvetica, sans-serif;}
 
   p {
-  color: #F4C095;
+  color: #331801;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding:20px
 }
 
 div.container {
@@ -20,12 +23,23 @@ div.container {
   font-family: Helvetica;
   font-weight: bold;
   font-size: 30px;
+  width: 1600px;
+}
+
+div.subcontainer {
+  width: 85%;
+  margin: auto;
+}
+
+@media(max-width: 1600px){
+  div.container{
+    100%
+  }
 }
 
 div.bottom {
   text-align: center;
   font-family:Arial, Helvetica, sans-serif;
-  font-weight: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 15px;
 }
 
@@ -56,15 +70,14 @@ h2{
 table, tr, td{
   width:10%;
   border: 2px solid black;
-  text-decoration-line: 15p;
   text-align:center;
   
   th,td {
-    border: 1px solid grey;
+    border: 1px solid rgb(34, 33, 33);
     padding: 8px;
   }
   
-  tr:nth-child(even){background-color: grey;color:white}
+  tr:nth-child(even){background-color: rgb(56, 56, 56);color:white}
   tr:nth-child(odd){background-color: #05407c;color:white}
   tr:hover {background-color: #000435}
   /*resources*/
@@ -79,14 +92,62 @@ ul.navbar {
   margin: 0;
   padding: 0;
   background-color: #071E22;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 
   display: flex;
   align-items: center;     /* Vertically centers items */
   justify-content: left; /*Puts the links horizontally left*/
   flex-wrap: wrap;         /* Helps if the window gets too small */
+  position: fixed;        /* keeps the navbar unaffected by changes to the body */
+  top: 0;
+  width: 100%;
+  min-height: 70px;
+
+
 }
+
+ul.nav-branding{
+  font-size: 2rem;
+}
+
+.hambuger{
+  display:none;
+  cursor: pointer;
+
+}
+
+.bar{
+  display:block;
+  width: 25px;
+  height: 3px;
+  margin: 5px, 0;
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+#home{
+  margin-top:70px
+}
+
+@media(max-width:1024px){
+  .hamburger{
+    display:block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity:0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    opacity:0;
+  }
+  .hamburger.active .bar:nth-child(3){
+    opacity:0;
+  }
+}
+
+
+
 ul.navbar li {
-  margin: 14 5px; /* Optional spacing between items */
+  margin: 5px; /* Optional spacing between items */
   padding: 10px 30px;
 
 }
@@ -99,10 +160,83 @@ ul.navbar li img {
 ul.navbar li a {
   display: inline-block;
   color: rgb(255, 250, 177);
-  padding: 15px 30px;
+  padding: 15px 15px;
   text-decoration: none;
 }
 
 ul.navbar li a:hover {
   background-color: #0e3941;
+}
+
+/*the popup*/
+
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+  z-index: 999;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+
+
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Dim the background */
+  z-index: 999;
+}
+
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup.active, .overlay.active {
+  display: block; /* Show when active */
+}
+
+/*FOR TEXT PARTIAL OVERLAP*/
+.grid {
+  display: grid;
+  justify-content: center;  /* This centers the content horizontally */
+  align-items: center;      /* This centers the content vertically */
+}
+
+.grid img, 
+.grid .text {
+  grid-area: 1 / 1; /* they stack */
+}
+
+.text {
+  align-self: end;  /* bottom of the image */
+  justify-self: start;
+  color: white;
+  padding-left: 75px;
+  padding-bottom: 10px;
+  text-shadow: 0px 0px 5px black;
 }

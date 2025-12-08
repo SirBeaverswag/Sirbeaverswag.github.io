@@ -6,8 +6,7 @@
 
     <style>
         body {
-                margin: 0;
-                padding: 0;
+          text-align: Left;
                 
                 }
 
@@ -44,6 +43,24 @@
                 vertical-align: middle;
                 border-radius: 8%; /* Make image rounded */
         }
+        mybutton {
+            background-color: transparent;  /* Transparent background */
+            background-repeat: no-repeat;
+            border: none;  /* No border */
+            cursor: pointer;  /* Makes the button clickable */
+            outline: none;  /* Removes the outline */
+            padding: 0;  /* Removes padding */
+            width: 450px;  /* Button width matches the image */
+            height: 300px;  /* Button height matches the image */
+            display: inline-block;  /* Ensures the button is inline with other content */
+        }
+
+        /* Style for the image inside the button */
+        mybutton img {
+            width: 100%;  /* Make the image fill the entire button */
+            height: 100%;  /* Make the image fill the entire button */
+            vertical-align: top;  /* Align the image to the top */
+        }
     </style>
 <title>Portfolio</title>
 
@@ -52,7 +69,7 @@
 
 <div class="container">
 <ul class="navbar">
-  <li><div id="rcorners"><img src="images/I'm trying.png" alt="PFP" style="width:150px;height:150px;"></div></li>
+  <li><div id="rcorners"><img src="images/I'm trying.png" alt="PFP" style="width:100px;height:100px;"></div></li>
   <li><a href="index.html">Home</a></li>
   <li><a href="portfolio.html">Portfolio</a></li>
   <li><a href="contact.html">Contact</a></li>
@@ -64,12 +81,94 @@
 <br>
 <br>
 
-<div class="thumbs">
-<img src="images/I'm trying.png" alt="PFP" style="width:450px;height:300px;">
+<button id="openPopupBtn1" class="mybutton">
+
+  <img src="images/NineIronRealms.png" alt="NineIronRealms" style="width:450px;height:300px;"> 
+
+</button>
+
+
+<div id="popupOverlay1" class="overlay"></div>
+
+<div id="myPopup1" class="popup">
+  <h2>LEVEL DESIGN</h2>
+  <img src="images/9-iron_1.png" alt="9 Iron Realms" style="width:450px;height:300px;">
+  <img src="images/9-iron_2.png" alt="9 Iron Realms" style="width:450px;height:300px;">
+  <img src="images/9-iron_3.png" alt="9 Iron Realms" style="width:450px;height:300px;">
+  <p>This is a S message.</p>
+  <button id="closePopupBtn1">Close</button>
 </div>
+
 <h1> Nine Iron Realms </h1>
 
-</body>
+<br>
+<br>
+
+<button id="openPopupBtn" class="mybutton">
+
+  <img src="images/Crease_in.png" alt="Crease VS the Reign of Tearer" style="width:450px;height:300px;"> 
+
+</button>
+
+
+<div id="popupOverlay" class="overlay"></div>
+
+<div id="myPopup" class="popup">
+  <h2>Interactive Popup</h2>
+  <img src="images/Crease_action.png" alt="Crease VS the Reign of Tearer" style="width:450px;height:300px;"> 
+  <p>This is a STI message.</p>
+  <button id="closePopupBtn">Close</button>
+</div>
+
+<h1> Crease VS the Reign of Tearer </h1>
+
+<br>
+<br>
+
+
+<button id="openPopupBtn2" class="mybutton">
+
+  <img src="images/Tallest Tower 1.png" alt="In the Tallest Tower" style="width:450px;height:300px;">
+
+</button>
+
+
+<div id="popupOverlay2" class="overlay"></div>
+
+<div id="myPopup2" class="popup">
+  <h2>Interactive Popup</h2>
+  <p>This is a STIN message.</p>
+  <button id="closePopupBtn2">Close</button>
+</div>
+
+
+<h1> In the Tallest Tower </h1>
+
+<br>
+<br>
+
+
+<button id="openPopupBtn3" class="mybutton">
+
+  <img src="images/western for website.png" alt="Western Game" style="width:450px;height:300px;vertical-align:right; "> 
+
+</button>
+
+
+<div id="popupOverlay3" class="overlay"></div>
+
+<div id="myPopup3" class="popup">
+  <img src="images/western for website.png" alt="Western Game" style="width:450px;height:300px; ">
+  <p>This is a STINK message.</p>
+  <button id="closePopupBtn3">Close</button>
+</div>
+
+<h1> Western Game </h1>
+
+
+
+
+
 
 <footer>
         <br>
@@ -79,13 +178,16 @@
 
         <div class="bottom">
         <ul>
-         <li><a href= "https://discord.com/users/SirBeaverswag">Discord</a> </a></li>
+         <li><a href= "https://discord.com/users/SirBeaverswag">Discord</a></li>
          <li><a href="www.linkedin.com/in/mcconnico-sharpe-b14106236">LinkedIn</a></li>
          <li><a href="https://itch.io/profile/sirbeaverswag">Itch.io</a></li>
          <li><a href="contact.html">Email</a></li>
         </ul>
 </div>
 </footer>
+
+<script src="java.js"></script>
+</body>
 
 
 </html>
